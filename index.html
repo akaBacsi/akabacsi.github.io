@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Promo App Móvil</title>
+</head>
+<body>
+
+  <header>
+    ¡Descubre nuestra app móvil!
+  </header>
+
+  <div class="container">
+    <p>Escanea el código QR o haz clic en el botón según tu dispositivo.</p>
+
+    <div id="mobile-button">
+      <a href="https://app.mediafire.com/myfiles" class="button">Descargar App</a>
+    </div>
+
+    <div id="qr-code">
+      <img src="codigo-qr.png" alt="Escanear con tu móvil" width="200" height="200">
+      <p>Escanea este código QR para obtener la app</p>
+    </div>
+  </div>
+
+  <script>
+    if (window.innerWidth <= 600) {
+      document.getElementById('mobile-button').style.display = 'block';
+    } else {
+      document.getElementById('qr-code').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
